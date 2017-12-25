@@ -4,6 +4,9 @@ Disallow: /pub/
 Disallow: /debian/
 Disallow: /debian-archive/
 Disallow: /debian-cd/
+Disallow: /debian-cd-daily/
+Disallow: /debian-cd-weekly/
+Disallow: /debian-security/
 Disallow: /ubuntu/
 Disallow: /ubuntu-cdimage/
 Disallow: /ubuntu-cloud-images/
