@@ -2,3 +2,10 @@ User-Agent: *
 Disallow: /goaccess/
 Disallow: /pub/
 Disallow: /debian/
+Disallow: /debian-archive/
+Disallow: /debian-cd/
+Disallow: /ubuntu/
+Disallow: /ubuntu-cdimage/
+Disallow: /ubuntu-cloud-images/
+Disallow: /ubuntu-ports/
+Disallow: /ubuntu-releases/
