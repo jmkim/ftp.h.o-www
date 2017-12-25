@@ -1,0 +1,18 @@
+# Let's Encrypt ACME challenges
+.well-known/
+
+# Reports
+goaccess/
+
+# Repositories
+debian/
+debian-archive/
+debian-cd/
+debian-cd-daily/
+debian-cd-weekly/
+debian-security/
+ubuntu/
+ubuntu-cdimage/
+ubuntu-cloud-images/
+ubuntu-ports/
+ubuntu-releases/
