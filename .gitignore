@@ -8,7 +8,6 @@ goaccess/
 debian/
 debian-archive/
 debian-cd/
-debian-cd-daily/
 debian-cd-weekly/
 debian-security/
 ubuntu/
