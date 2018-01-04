@@ -6,6 +6,7 @@ Disallow: /debian-archive/
 Disallow: /debian-cd/
 Disallow: /debian-cd-weekly/
 Disallow: /debian-security/
+Disallow: /raspbian/
 Disallow: /ubuntu/
 Disallow: /ubuntu-cdimage/
 Disallow: /ubuntu-cloud-images/
