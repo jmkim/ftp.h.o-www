@@ -7,6 +7,7 @@ Disallow: /debian-cd/
 Disallow: /debian-cd-weekly/
 Disallow: /debian-ports/
 Disallow: /debian-security/
+Disallow: /raspberrypi/
 Disallow: /raspbian/
 Disallow: /ubuntu/
 Disallow: /ubuntu-cdimage/
