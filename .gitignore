@@ -11,6 +11,7 @@ debian-cd/
 debian-cd-weekly/
 debian-ports/
 debian-security/
+dotdeb/
 raspberrypi/
 raspbian/
 ubuntu/
