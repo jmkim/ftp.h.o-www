@@ -12,6 +12,7 @@ debian-cd-weekly/
 debian-ports/
 debian-security/
 dotdeb/
+mariadb/
 raspberrypi/
 raspbian/
 ubuntu/

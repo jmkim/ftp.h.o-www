@@ -8,6 +8,7 @@ Disallow: /debian-cd-weekly/
 Disallow: /debian-ports/
 Disallow: /debian-security/
 Disallow: /dotdeb/
+Disallow: /mariadb/
 Disallow: /raspberrypi/
 Disallow: /raspbian/
 Disallow: /ubuntu/
