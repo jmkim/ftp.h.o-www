@@ -5,6 +5,10 @@
 goaccess/
 
 # Repositories
+CEAN/
+CPAN/
+CRAN/
+CTAN/
 debian/
 debian-archive/
 debian-cd/

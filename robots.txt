@@ -1,6 +1,10 @@
 User-Agent: *
 Disallow: /goaccess/
 Disallow: /pub/
+Disallow: /CEAN/
+Disallow: /CPAN/
+Disallow: /CRAN/
+Disallow: /CTAN/
 Disallow: /debian/
 Disallow: /debian-archive/
 Disallow: /debian-cd/
