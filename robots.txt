@@ -9,6 +9,7 @@ Disallow: /debian-ports/
 Disallow: /debian-security/
 Disallow: /dotdeb/
 Disallow: /mariadb/
+Disallow: /php.net/
 Disallow: /raspberrypi/
 Disallow: /raspbian/
 Disallow: /ubuntu/
