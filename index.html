@@ -1,122 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Archive mirror for open source software, for South Korea and East Asian countries. Available for Debian, Ubuntu, Raspbian and more.">
-    <meta name="keywords" content="ftp.harukasan.org,opensource,mirror,linux,debian">
-    <meta name="author" content="Jongmin Kim <jmkim@pukyong.ac.kr>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="description" content="Archive mirror for open source software, for South Korea and East Asian countries. Available for Debian, Ubuntu, Raspbian and more.">
+  <meta name="keywords" content="harukasan,mirror,station,harukasan.org,ftp.harukasan.org,opensource,linux,debian">
+  <meta name="author" content="Jongmin Kim <jmkim@ftp.harukasan.org>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
 
-    <title>ftp.harukasan.org</title>
+  <title>Harukasan Mirror Station</title>
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <link rel="stylesheet" href="./.harukasan/css/bootstrap.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+    body { font-family: 'Open Sans', sans-serif; }
+  </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-88242528-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-88242528-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </head>
 
 <body>
-<header>
-    <h1>ftp.harukasan.org</h1>
-    
-    <p>ftp.harukasan.org is an archive mirror for open source software, for <strong>South Korea and East Asian countries</strong>.</p>
-    <p>Our server is located in <strong>Busan, South Korea</strong>.</p>
-    <p>Our service is maintained by <a href="http://db.pknu.ac.kr">IDBLAB@PKNU</a>.<br>
-    Our public service was started on November 25, 2016.</p>
-    <p>Available protocols:
-        <a href="http://ftp.harukasan.org/">HTTP</a> /
-        <a href="https://ftp.harukasan.org/">HTTPS</a> /
-        <a href="ftp://ftp.harukasan.org/">FTP</a> /
-        <a href="rsync://ftp.harukasan.org/">rsync</a> <small>[<a href="http://man7.org/linux/man-pages/man1/rsync.1.html">?</a>]</small>
-    </p>
-</header>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <header>
+          <h1>Harukasan Mirror Station</h1>
+          <p>Harukasan Mirror Station is an archive mirror for open source software, for <strong>South Korea and East Asian countries</strong>.<br>
+             Public service was started on November 25, 2016.</p>
+        </header>
+      </div>
+    </div>
 
-<section>
-    <h2>Contents</h2>
-    <section>
-        <h3>List of mirrors</h3>
-        <ul>
-            <li><a href="CEAN"><strong>CEAN</strong></a> - Comprehensive Erlang Archive Network</li>
-            <li><a href="CPAN"><strong>CPAN</strong></a> - Comprehensive Perl Archive Network</li>
-            <li><a href="CRAN"><strong>CRAN</strong></a> - Comprehensive R Archive Network</li>
-            <li><a href="CTAN"><strong>CTAN</strong></a> - Comprehensive TeX Archive Network</li>
-            <li><a href="debian"><strong>debian</strong></a> - Debian packages <strong>[<a href="https://mirror-master.debian.org/status/mirror-info/ftp.harukasan.org.html">status</a>]</strong></li>
-            <li><a href="debian-archive"><strong>debian-archive</strong></a> - Debian Old releases</li>
-            <li><a href="debian-cd"><strong>debian-cd</strong></a> - Debian CD images (Stable builds)</li>
-            <li><a href="debian-cd-weekly"><strong>debian-cd-weekly</strong></a> - Debian CD images (Weekly builds)</li>
-            <li><a href="debian-ports"><strong>debian-ports</strong></a> - Debian Ports</li>
-            <li><a href="debian-security"><strong>debian-security</strong></a> - Debian Security</li>
-            <li><a href="dotdeb"><strong>dotdeb</strong></a> - Dotdeb</li>
-            <li><a href="eclipse"><strong>eclipse</strong></a> - Eclipse</li>
-            <li><a href="mariadb"><strong>mariadb</strong></a> - MariaDB</li>
-            <li><a href="http://php.net.ftp.harukasan.org"><strong>php.net</strong></a> - PHP.net (archive: <a href="php.net">/php.net/</a>)</li>
-            <li><a href="raspberrypi"><strong>raspberrypi</strong></a> - Raspberry Pi Archive (<a href="http://archive.raspberrypi.org">archive.raspberrypi.org</a>)</li>
-            <li><a href="raspbian"><strong>raspbian</strong></a> - Raspbian Repository</li>
-            <li><a href="ubuntu"><strong>ubuntu</strong></a> - Ubuntu Archive <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-archive">status</a>]</strong></li>
-            <li><a href="ubuntu-cdimage"><strong>ubuntu-cdimage</strong></a> - Ubuntu CDImage</li>
-            <li><a href="ubuntu-cloud-images"><strong>ubuntu-cloud-images</strong></a> - Ubuntu Cloud Images</li>
-            <li><a href="ubuntu-ports"><strong>ubuntu-ports</strong></a> - Ubuntu Ports</li>
-            <li><a href="ubuntu-releases"><strong>ubuntu-releases</strong></a> - Ubuntu Releases <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-release">status</a>]</strong></li>
-            <li><a href="ubuntu-security"><strong>ubuntu-security</strong></a> - Ubuntu Security</li>
-        </ul>
-    </section>
+    <div class="row">
+      <div class="col-lg-8">
+        <section>
+          <h2>Mirror list</h2>
+          <table class="table table-sm table-hover">
+            <thead>
+              <tr><th scope="col">Name</th><th scope="col">Desc</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><a href="CEAN">CEAN</a></td><td>Comprehensive Erlang Archive Network</td></tr>
+              <tr><td><a href="CPAN">CPAN</a></td><td>Comprehensive Perl Archive Network</td></tr>
+              <tr><td><a href="CRAN">CRAN</a></td><td>Comprehensive R Archive Network</td></tr>
+              <tr><td><a href="CTAN">CTAN</a></td><td>Comprehensive TeX Archive Network</td></tr>
+              <tr><td><a href="debian">debian</a></td><td>Debian packages <strong>[<a href="https://mirror-master.debian.org/status/mirror-info/ftp.harukasan.org.html">status</a>]</strong></td></tr>
+              <tr><td><a href="debian-archive">debian-archive</a></td><td>Debian Old releases</td></tr>
+              <tr><td><a href="debian-cd">debian-cd</a></td><td>Debian CD images (Stable builds)</td></tr>
+              <tr><td><a href="debian-cd-weekly">debian-cd-weekly</a></td><td>Debian CD images (Weekly builds)</td></tr>
+              <tr><td><a href="debian-ports">debian-ports</a></td><td>Debian Ports</td></tr>
+              <tr><td><a href="debian-security">debian-security</a></td><td>Debian Security</td></tr>
+              <tr><td><a href="dotdeb">dotdeb</a></td><td>Dotdeb</td></tr>
+              <tr><td><a href="eclipse">eclipse</a></td><td>Eclipse</td></tr>
+              <tr><td><a href="mariadb">mariadb</a></td><td>MariaDB</td></tr>
+              <tr><td><a href="http://php.net.ftp.harukasan.org">php.net</a></td><td>PHP.net (archive: <a href="php.net">/php.net/</a>)</td></tr>
+              <tr><td><a href="raspberrypi">raspberrypi</a></td><td>Raspberry Pi Archive (<a href="http://archive.raspberrypi.org">archive.raspberrypi.org</a>)</td></tr>
+              <tr><td><a href="raspbian">raspbian</a></td><td>Raspbian Repository</td></tr>
+              <tr><td><a href="ubuntu">ubuntu</a></td><td>Ubuntu Archive <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-archive">status</a>]</strong></td></tr>
+              <tr><td><a href="ubuntu-cdimage">ubuntu-cdimage</a></td><td>Ubuntu CDImage</td></tr>
+              <tr><td><a href="ubuntu-cloud-images">ubuntu-cloud-images</a></td><td>Ubuntu Cloud Images</td></tr>
+              <tr><td><a href="ubuntu-ports">ubuntu-ports</a></td><td>Ubuntu Ports</td></tr>
+              <tr><td><a href="ubuntu-releases">ubuntu-releases</a></td><td>Ubuntu Releases <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-release">status</a>]</strong></td></tr>
+              <tr><td><a href="ubuntu-security">ubuntu-security</a></td><td>Ubuntu Security</td></tr>
+            </tbody>
+          </table>
+        </section>
 
-<!-- kws.harukasan.org goes down for a moment - jmkim, Feb 21, 2018
-    <section>
-        <h3>Others</h3>
-        <ul>
+        <!-- kws.harukasan.org goes down for a moment - jmkim, Feb 21, 2018
+        <section>
+          <h2>Others</h2>
+          <ul>
             <li><a href="http://goodman:iamnotaspammer@kws.harukasan.org/app/kibana#/dashboard/29630120-d8f9-11e7-a104-3d9a195288a6?_g=(refreshInterval%3A(display%3AOff%2Cpause%3A!f%2Cvalue%3A0)%2Ctime%3A(from%3Anow-1y%2Cmode%3Aquick%2Cto%3Anow))"><strong>http://kws.harukasan.org</strong></a> - Reports using Elastic Stack</li>
-        </ul>
-    </section>
--->
-</section>
+          </ul>
+        </section>
+        -->
+      </div>
 
-<section>
-    <h2>Notices</h2>
-    <article>
-        <h3>We're looking for repositories that needs mirroring!</h3>
+      <div class="col-lg-4">
+        <!-- Hide announcement for a moment - jmkim, Mar 10, 2018
+        <section>
+          <h2>News announcement</h2>
+          <ul>
+            <li>We're looking for repositories that needs mirroring!</li>
+          </ul>
+        </section>
+        -->
 
-        <p>Email me (see the footer) the repository what you want to mirror.<br>
-        We'll do in your stead. Smaller one is better, but it doesn't matter.<br>
-        Feel free to mail me!</p>
-    </article>
+        <section>
+          <h2>Location</h2>
+          <p><strong>Busan, South Korea</strong><br><code>{ lat: 35.1348105, lng: 129.1030294 }</code></p>
+        </section>
 
-    <article>
-        <h3>Maintenance schedules</h3>
-        <ul>
-            <li><strong>Wed Feb 21 14:00:00 ~ Sat Mar 3 14:00:00 UTC 2018, <span style="color: red;">10 days</span></strong> - Hardware maintenance (migrate the data to new hard disk drives)</li>
-            <li><strong>Wed Feb 21 14:00:00 ~ Sat Feb 24 14:00:00 UTC 2018, <span style="color: red;">3 days</span></strong> - Network equipment maintenance (network recovery issued by ISP)</li>
-            <li><strong>Thu Jan 4 16:00:00 ~ 19:00:00 UTC 2018, <span style="color: red;">3 hrs</span></strong> - Software maintenance (apply the Spectre vulnerability advisory patches (CVE-2017-5715, CVE-2017-5753))</li>
-            <li><strong>Sat Dec 23 13:00:00 ~ 19:00:00 UTC 2017, <span style="color: red;">6 hrs</span></strong> - Hardware maintenance (migrate the data to new hard disk drives)</li>
-            <li><strong>Fri Dec 22 16:00:00 ~ 19:00:00 UTC 2017, <span style="color: red;">3 hrs</span></strong> - Hardware maintenance (add hard disk drives)</li>
-            <li><strong>Thu Aug 31 02:00:00 ~ 08:00:00 UTC 2017, <span style="color: red;">6 hrs</span></strong> - Network equipment maintenance (replace the GPON ONU)</li>
-            <li><strong>Mon Aug 19 13:00:00 ~ 19:00:00 UTC 2017, <span style="color: red;">6 hrs</span></strong> - Hardware maintenance (upgrade the processors and memory cards)</li>
-            <li><strong>Mon Aug 14 13:00:00 ~ 19:00:00 UTC 2017, <span style="color: red;">6 hrs</span></strong> - Network equipment maintenance (network line reorganization)</li>
-        </ul>
-    </article>
-</section>
+        <section>
+          <h2>URLs</h2>
+          <ul>
+            <li>HTTP<br><a href="http://ftp.harukasan.org/">http://ftp.harukasan.org</a></li>
+            <li>HTTPS<br><a href="https://ftp.harukasan.org/">https://ftp.harukasan.org</a></li>
+            <li>FTP<br><a href="ftp://ftp.harukasan.org/">ftp://ftp.harukasan.org</a></li>
+            <li>rsync <small>[<a href="http://man7.org/linux/man-pages/man1/rsync.1.html">?</a>]</small><br><a href="rsync://ftp.harukasan.org/">rsync rsync://ftp.harukasan.org</a></li>
+          </ul>
+        </section>
 
-<section>
-    <h2>Sponsors</h2>
+        <section>
+          <h2>Sponsors</h2>
 
-    <ul>
-        <li>Harukasan - <a href="http://harukasan.org">http://harukasan.org</a></li>
-        <li>Information and Database Systems Laboratory, Pukyong National University - <a href="http://db.pknu.ac.kr">http://db.pknu.ac.kr</a></li>
-    </ul>
-</section>
+          <ul>
+            <li>Harukasan<br><a href="http://harukasan.org">http://harukasan.org</a></li>
+            <li>Information and Database Systems Laboratory, Pukyong National University<br><a href="http://db.pknu.ac.kr">http://db.pknu.ac.kr</a></li>
+          </ul>
+        </section>
 
-<footer>
-    <h2>Contacts</h2>
+        <section>
+          <h2>Contact us</h2>
+          <p><a href="mailto:ftp-admin@harukasan.org">ftp-admin@harukasan.org</a></p>
+        </section>
+      </div>
+    </div><!-- row -->
 
-    <ul>
-        <li><a href="mailto:ftp-admin@harukasan.org">ftp-admin (at) harukasan.org</a></li>
-    </ul>
-</footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <footer>
+          <p>This site is supported by <a href="http://db.pknu.ac.kr">IDBLAB@PKNU</a> and is operated and maintained by <a href="http://harukasan.org">Harukasan</a>.</p>
+        </footer>
+      </div>
+    </div><!-- row -->
+  </div><!-- container -->
+
+  <script src="./.harukasan/js/jquery-3.2.1.min.js"></script>
+  <script src="./.harukasan/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

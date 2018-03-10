@@ -1,0 +1,53 @@
+{
+  "title": "Maintenance schedules",
+  "content": [
+    {
+      "start": "Mon Aug 14 13:00:00 UTC 2017",
+      "end": "Mon Aug 14 19:00:00 UTC 2017",
+      "during": "6 hours",
+      "desc": "Network equipment maintenance (network line reorganization)"
+    },
+    {
+      "start": "Mon Aug 19 13:00:00 UTC 2017",
+      "end": "Mon Aug 19 19:00:00 UTC 2017",
+      "during": "6 hours",
+      "desc": "Hardware maintenance (upgrade the processors and memory cards)"
+    },
+    {
+      "start": "Thu Aug 31 02:00:00 UTC 2017",
+      "end": "Thu Aug 31 08:00:00 UTC 2017",
+      "during": "6 hours",
+      "desc": "Network equipment maintenance (replace the GPON ONU)"
+    },
+    {
+      "start": "Fri Dec 22 16:00:00 UTC 2017",
+      "end": "Fri Dec 22 19:00:00 UTC 2017",
+      "during": "3 hours",
+      "desc": "Hardware maintenance (add hard disk drives)"
+    },
+    {
+      "start": "Sat Dec 23 13:00:00 UTC 2017",
+      "end": "Sat Dec 23 19:00:00 UTC 2017",
+      "during": "6 hours",
+      "desc": "Hardware maintenance (migrate the data to new hard disk drives)"
+    },
+    {
+      "start": "Thu Jan 4 16:00:00 UTC 2018",
+      "end": "Thu Jan 4 19:00:00 UTC 2018",
+      "during": "3 hours",
+      "desc": "Software maintenance (apply the Spectre vulnerability advisory patches (CVE-2017-5715, CVE-2017-5753))"
+    },
+    {
+      "start": "Wed Feb 21 14:00:00 UTC 2018",
+      "end": "Sat Feb 24 14:00:00 UTC 2018",
+      "during": "3 days",
+      "desc": "Network equipment maintenance (network recovery issued by ISP)"
+    },
+    {
+      "start": "Wed Feb 21 14:00:00 UTC 2018",
+      "end": "Sat Mar 3 14:00:00 UTC 2018",
+      "during": "10 days",
+      "desc": "Hardware maintenance (migrate the data to new hard disk drives)"
+    }
+  ]
+}
