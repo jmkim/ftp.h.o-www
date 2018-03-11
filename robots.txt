@@ -2,7 +2,6 @@ User-Agent: *
 Disallow: /.harukasan/
 Disallow: /goaccess/
 Disallow: /pub/
-Disallow: /CEAN/
 Disallow: /CPAN/
 Disallow: /CRAN/
 Disallow: /CTAN/
