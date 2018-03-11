@@ -128,7 +128,7 @@
     <div class="row">
       <div class="col-lg-12">
         <footer>
-          <p>This site is supported by <a href="http://db.pknu.ac.kr">IDBLAB@PKNU</a> and is operated and maintained by <a href="http://harukasan.org">Harukasan</a>.</p>
+          <p>This site is supported by <a href="http://db.pknu.ac.kr">IDBLAB@PKNU</a> and is operated and maintained by <span class="text-harukasan pop-harukasan">Harukasan</span>.</p>
         </footer>
       </div>
     </div><!-- row -->
@@ -136,5 +136,16 @@
 
   <script src="./.harukasan/js/jquery-3.2.1.min.js"></script>
   <script src="./.harukasan/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.pop-harukasan').popover({
+        html: true,
+        animation: true,
+        trigger: 'hover',
+        placement: 'top',
+        content: function () { return '<img alt="Harukasan" width="240" height="135" src="./.harukasan/img/harukasan-gaaaa-480-270.gif">'; }
+      }); 
+    });
+  </script>
 </body>
 </html>
