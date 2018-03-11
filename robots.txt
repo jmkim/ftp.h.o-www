@@ -14,6 +14,7 @@ Disallow: /debian-ports/
 Disallow: /debian-security/
 Disallow: /dotdeb/
 Disallow: /eclipse/
+Disallow: /linuxmint/
 Disallow: /mariadb/
 Disallow: /php.net/
 Disallow: /raspberrypi/
