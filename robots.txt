@@ -13,6 +13,8 @@ Disallow: /debian-ports/
 Disallow: /debian-security/
 Disallow: /dotdeb/
 Disallow: /eclipse/
+Disallow: /kali/
+Disallow: /kali-images/
 Disallow: /linuxmint/
 Disallow: /mariadb/
 Disallow: /php.net/
