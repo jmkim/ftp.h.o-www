@@ -102,12 +102,45 @@
 
         <section>
           <h2>URLs</h2>
-          <ul>
-            <li>HTTP<br><a href="http://ftp.harukasan.org/">http://ftp.harukasan.org</a></li>
-            <li>HTTPS<br><a href="https://ftp.harukasan.org/">https://ftp.harukasan.org</a></li>
-            <li>FTP<br><a href="ftp://ftp.harukasan.org/">ftp://ftp.harukasan.org</a></li>
-            <li>rsync <small>[<a href="http://man7.org/linux/man-pages/man1/rsync.1.html">?</a>]</small><br><a href="rsync://ftp.harukasan.org/">rsync rsync://ftp.harukasan.org</a></li>
+
+          <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#ip-all">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#ip-v4-only">IPv4 only</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#ip-v6-only">IPv6 only</a>
+            </li>
           </ul>
+
+          <div class="tab-content mt-2">
+            <div id="ip-all" class="tab-pane container fade show active">
+              <ul>
+                <li>HTTP<br><a href="http://ftp.harukasan.org/">http://ftp.harukasan.org</a></li>
+                <li>HTTPS<br><a href="https://ftp.harukasan.org/">https://ftp.harukasan.org</a></li>
+                <li>FTP<br><a href="ftp://ftp.harukasan.org/">ftp://ftp.harukasan.org</a></li>
+                <li>rsync <small>[<a href="http://man7.org/linux/man-pages/man1/rsync.1.html">?</a>]</small><br><a href="rsync://ftp.harukasan.org/">rsync rsync://ftp.harukasan.org</a></li>
+              </ul>
+            </div>
+            <div id="ip-v4-only" class="tab-pane container fade">
+              <ul>
+                <li>HTTP<br><a href="http://ftp4.harukasan.org/">http://ftp4.harukasan.org</a></li>
+                <li>HTTPS<br><a href="https://ftp4.harukasan.org/">https://ftp4.harukasan.org</a></li>
+                <li>FTP<br><a href="ftp://ftp4.harukasan.org/">ftp://ftp4.harukasan.org</a></li>
+                <li>rsync <small>[<a href="http://man7.org/linux/man-pages/man1/rsync.1.html">?</a>]</small><br><a href="rsync://ftp4.harukasan.org/">rsync rsync://ftp4.harukasan.org</a></li>
+              </ul>
+            </div>
+            <div id="ip-v6-only" class="tab-pane container fade">
+              <ul>
+                <li>HTTP<br><a href="http://ftp6.harukasan.org/">http://ftp6.harukasan.org</a></li>
+                <li>HTTPS<br><a href="https://ftp6.harukasan.org/">https://ftp6.harukasan.org</a></li>
+                <li>FTP<br><a href="ftp://ftp6.harukasan.org/">ftp://ftp6.harukasan.org</a></li>
+                <li>rsync <small>[<a href="http://man7.org/linux/man-pages/man1/rsync.1.html">?</a>]</small><br><a href="rsync://ftp6.harukasan.org/">rsync rsync://ftp6.harukasan.org</a></li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>

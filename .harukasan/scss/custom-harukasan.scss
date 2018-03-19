@@ -4,7 +4,7 @@
 
     Add following line to file 'scss/bootstrap.scss', between @import "functions" and @import "variables":
 
-        @import "custom-harukasan"
+        @import "custom-harukasan";
 
     https://github.com/twbs/bootstrap/issues/25550
 */
@@ -14,6 +14,7 @@ $theme-colors: (
 );
 
 $link-color: theme-color("harukasan");
+$component-active-bg:         theme-color("harukasan");
 
 $font-size-base:              1rem;
 $font-weight-normal:          400;
