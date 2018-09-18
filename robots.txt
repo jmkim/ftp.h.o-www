@@ -9,7 +9,6 @@ Disallow: /debian/
 Disallow: /debian-archive/
 Disallow: /debian-cd/
 Disallow: /debian-cd-weekly/
-Disallow: /debian-ports/
 Disallow: /debian-security/
 Disallow: /dotdeb/
 Disallow: /eclipse/

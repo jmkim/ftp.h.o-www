@@ -12,7 +12,6 @@ debian/
 debian-archive/
 debian-cd/
 debian-cd-weekly/
-debian-ports/
 debian-security/
 dotdeb/
 eclipse/
