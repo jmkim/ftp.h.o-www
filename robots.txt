@@ -24,4 +24,3 @@ Disallow: /ubuntu/
 Disallow: /ubuntu-cdimage/
 Disallow: /ubuntu-ports/
 Disallow: /ubuntu-releases/
-Disallow: /ubuntu-security/
