@@ -260,11 +260,11 @@
     // Update the repository status indicator
     function updateRepoStatus() {
         for(var repoName in REPOLIST) {
-            getTextFromUrl(repoName, REPOLIST[repoName].lockfile, function (repoName, statusCode, responseText) {
+            getTextFromUrl(repoName, REPOLIST[repoName].lockfile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                 if(statusCode == 200) {
                     setRepoStatusUpdating(repoName);
                 } else {
-                    getTextFromUrl(repoName, REPOLIST[repoName].tracefile, function (repoName, statusCode, responseText) {
+                    getTextFromUrl(repoName, REPOLIST[repoName].tracefile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                         if(statusCode != 200) {
                             setRepoStatusMaintenance(repoName);
                         } else {
