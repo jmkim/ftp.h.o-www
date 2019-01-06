@@ -24,6 +24,10 @@
   display: inline-block;
 }
 
+.hs-status-loading {
+  background: #6c757d;
+}
+
 .hs-status-normal {
   background: #28a745;
 }
