@@ -12,6 +12,7 @@
   <title>Harukasan Mirror Station</title>
 
   <link rel="stylesheet" href="./.harukasan/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./.harukasan/css/hs-status.css">
   <style>
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
     body { font-family: 'Open Sans', sans-serif; font-size: 0.91rem; }
@@ -27,7 +28,7 @@
   </script>
 </head>
 
-<body class="text-dark">
+<body class="text-dark" onload="updateRepoStatus();">
   <div class="container pt-3">
     <div class="row">
       <div class="col-lg-12">
@@ -42,14 +43,29 @@
     <div class="row">
       <div class="col-lg-8">
         <section>
-          <h2>Mirror list</h2>
+          <div class="row">
+            <div class="col-lg-4">
+              <h2>Mirror list</h2>
+            </div>
+            <div class="col-lg-8 text-right">
+              <small>
+                <span class="hs-status-guide-line"><div class="hs-status-guide hs-status-normal"></div> Normal</span>
+                <span class="hs-status-guide-line"><div class="hs-status-guide hs-status-updating"></div> Updating</span>
+                <span class="hs-status-guide-line"><div class="hs-status-guide hs-status-outdated"></div> Outdated</span>
+                <span class="hs-status-guide-line"><div class="hs-status-guide hs-status-maintenance"></div> In maintenance</span>
+                <br>
+                <span class="hs-status-guide-line">Last updated: <span id="hs-status-lastupdated"></span></span>
+              </small>
+            </div>
+          </div>
+
           <table class="table table-sm table-hover">
             <thead>
-              <tr><th scope="col">Name</th><th scope="col">Desc</th></tr>
+              <tr><th scope="col"></th><th scope="col">Name</th><th scope="col">Desc</th></tr>
             </thead>
             <tbody>
-              <tr><td><a class="font-weight-bold" href="CPAN">CPAN</a></td><td>Comprehensive Perl Archive Network</td></tr>
-              <tr>
+              <tr><td><div class="hs-status" id="hs-status-CPAN"></div></td><td><a class="font-weight-bold" href="CPAN">CPAN</a></td><td>Comprehensive Perl Archive Network</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-CRAN"></div></td>
                 <td><a class="font-weight-bold" href="CRAN">CRAN</a></td>
                 <td>
                   Comprehensive R Archive Network
@@ -58,26 +74,26 @@
                   <strong>[<a href="https://cran.r-project.org/mirmon_report_old_release.html#kr">stat-win-old</a>]</strong>
                 </td>
               </tr>
-              <tr><td><a class="font-weight-bold" href="CTAN">CTAN</a></td><td>Comprehensive TeX Archive Network <strong>[<a href="http://dante.ctan.org/mirmon/#kr">status</a>]</strong></td></tr>
-              <tr><td><a class="font-weight-bold" href="debian">debian</a></td><td>Debian packages <strong>[<a href="https://mirror-master.debian.org/status/mirror-info/ftp.harukasan.org.html">status</a>]</strong></td></tr>
-              <tr><td><a class="font-weight-bold" href="debian-archive">debian-archive</a></td><td>Debian Old releases</td></tr>
-              <tr><td><a class="font-weight-bold" href="debian-cd">debian-cd</a></td><td>Debian CD images (Stable builds)</td></tr>
-              <tr><td><a class="font-weight-bold" href="debian-cd-weekly">debian-cd-weekly</a></td><td>Debian CD images (Weekly builds)</td></tr>
-              <tr><td><a class="font-weight-bold" href="debian-ports">debian-ports</a></td><td>Debian Ports</td></tr>
-              <tr><td><a class="font-weight-bold" href="debian-security">debian-security</a></td><td>Debian Security</td></tr>
-              <tr><td><a class="font-weight-bold" href="dotdeb">dotdeb</a></td><td>Dotdeb</td></tr>
-              <tr><td><a class="font-weight-bold" href="eclipse">eclipse</a></td><td>Eclipse</td></tr>
-              <tr><td><a class="font-weight-bold" href="kali">kali</a></td><td>Kali Linux packages</td></tr>
-              <tr><td><a class="font-weight-bold" href="kali-images">kali-images</a></td><td>Kali Linux pre-built ISO images</td></tr>
-              <tr><td><a class="font-weight-bold" href="linuxmint">linuxmint</a></td><td>Linux Mint packages</td></tr>
-              <tr><td><a class="font-weight-bold" href="mariadb">mariadb</a></td><td>MariaDB</td></tr>
-              <tr><td><a class="font-weight-bold" href="http://php.net.ftp.harukasan.org">php.net</a></td><td>PHP.net (archive: <a href="php.net">/php.net/</a>)</td></tr>
-              <tr><td><a class="font-weight-bold" href="raspberrypi">raspberrypi</a></td><td>Raspberry Pi Archive (<a href="http://archive.raspberrypi.org">archive.raspberrypi.org</a>)</td></tr>
-              <tr><td><a class="font-weight-bold" href="raspbian">raspbian</a></td><td>Raspbian Repository</td></tr>
-              <tr><td><a class="font-weight-bold" href="ubuntu">ubuntu</a></td><td>Ubuntu Archive <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-archive">status</a>]</strong></td></tr>
-              <tr><td><a class="font-weight-bold" href="ubuntu-cdimage">ubuntu-cdimage</a></td><td>Ubuntu CDImage</td></tr>
-              <tr><td><a class="font-weight-bold" href="ubuntu-ports">ubuntu-ports</a></td><td>Ubuntu Ports</td></tr>
-              <tr><td><a class="font-weight-bold" href="ubuntu-releases">ubuntu-releases</a></td><td>Ubuntu Releases <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-release">status</a>]</strong></td></tr>
+              <tr><td><div class="hs-status" id="hs-status-CTAN"></div></td><td><a class="font-weight-bold" href="CTAN">CTAN</a></td><td>Comprehensive TeX Archive Network <strong>[<a href="http://dante.ctan.org/mirmon/#kr">status</a>]</strong></td></tr>
+              <tr><td><div class="hs-status" id="hs-status-debian"></div></td><td><a class="font-weight-bold" href="debian">debian</a></td><td>Debian packages <strong>[<a href="https://mirror-master.debian.org/status/mirror-info/ftp.harukasan.org.html">status</a>]</strong></td></tr>
+              <tr><td><div class="hs-status" id="hs-status-debian-archive"></div></td><td><a class="font-weight-bold" href="debian-archive">debian-archive</a></td><td>Debian Old releases</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-debian-cd"></div></td><td><a class="font-weight-bold" href="debian-cd">debian-cd</a></td><td>Debian CD images (Stable builds)</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-debian-cd-weekly"></div></td><td><a class="font-weight-bold" href="debian-cd-weekly">debian-cd-weekly</a></td><td>Debian CD images (Weekly builds)</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-debian-ports"></div></td><td><a class="font-weight-bold" href="debian-ports">debian-ports</a></td><td>Debian Ports</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-debian-security"></div></td><td><a class="font-weight-bold" href="debian-security">debian-security</a></td><td>Debian Security</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-dotdeb"></div></td><td><a class="font-weight-bold" href="dotdeb">dotdeb</a></td><td>Dotdeb</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-eclipse"></div></td><td><a class="font-weight-bold" href="eclipse">eclipse</a></td><td>Eclipse</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-kali"></div></td><td><a class="font-weight-bold" href="kali">kali</a></td><td>Kali Linux packages</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-kali-images"></div></td><td><a class="font-weight-bold" href="kali-images">kali-images</a></td><td>Kali Linux pre-built ISO images</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-linuxmint"></div></td><td><a class="font-weight-bold" href="linuxmint">linuxmint</a></td><td>Linux Mint packages</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-mariadb"></div></td><td><a class="font-weight-bold" href="mariadb">mariadb</a></td><td>MariaDB</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-php.net"></div></td><td><a class="font-weight-bold" href="http://php.net.ftp.harukasan.org">php.net</a></td><td>PHP.net (archive: <a href="php.net">/php.net/</a>)</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-raspberrypi"></div></td><td><a class="font-weight-bold" href="raspberrypi">raspberrypi</a></td><td>Raspberry Pi Archive (<a href="http://archive.raspberrypi.org">archive.raspberrypi.org</a>)</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-raspbian"></div></td><td><a class="font-weight-bold" href="raspbian">raspbian</a></td><td>Raspbian Repository</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-ubuntu"></div></td><td><a class="font-weight-bold" href="ubuntu">ubuntu</a></td><td>Ubuntu Archive <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-archive">status</a>]</strong></td></tr>
+              <tr><td><div class="hs-status" id="hs-status-ubuntu-cdimage"></div></td><td><a class="font-weight-bold" href="ubuntu-cdimage">ubuntu-cdimage</a></td><td>Ubuntu CDImage</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-ubuntu-ports"></div></td><td><a class="font-weight-bold" href="ubuntu-ports">ubuntu-ports</a></td><td>Ubuntu Ports</td></tr>
+              <tr><td><div class="hs-status" id="hs-status-ubuntu-releases"></div></td><td><a class="font-weight-bold" href="ubuntu-releases">ubuntu-releases</a></td><td>Ubuntu Releases <strong>[<a href="https://launchpad.net/ubuntu/+mirror/ftp.harukasan.org-release">status</a>]</strong></td></tr>
             </tbody>
           </table>
         </section>
@@ -197,6 +213,117 @@
         content: function () { return '<img alt="Harukasan" width="240" height="135" src="./.harukasan/img/harukasan-gaaaa-480-270.gif">'; }
       }); 
     });
+  </script>
+  <script>
+    function clearRepoStatus(repoName) {
+      document.getElementById('hs-status-' + repoName).classList.remove('hs-status-normal');
+      document.getElementById('hs-status-' + repoName).classList.remove('hs-status-updating');
+      document.getElementById('hs-status-' + repoName).classList.remove('hs-status-outdated');
+      document.getElementById('hs-status-' + repoName).classList.remove('hs-status-maintenance');
+    }
+
+    function setRepoStatusNormal(repoName) {
+      clearRepoStatus(repoName);
+      document.getElementById('hs-status-' + repoName).classList.add('hs-status-normal');
+    }
+
+    function setRepoStatusUpdating(repoName) {
+      clearRepoStatus(repoName);
+      document.getElementById('hs-status-' + repoName).classList.add('hs-status-updating');
+    }
+
+    function setRepoStatusOutdated(repoName) {
+      clearRepoStatus(repoName);
+      document.getElementById('hs-status-' + repoName).classList.add('hs-status-outdated');
+    }
+
+    function setRepoStatusMaintenance(repoName) {
+      clearRepoStatus(repoName);
+      document.getElementById('hs-status-' + repoName).classList.add('hs-status-maintenance');
+    }
+
+    function getTextFromUrl(repoName, repoTracefileUrl, callback) {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", repoTracefileUrl, true);
+      xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4) {
+              if(xmlhttp.status == 200) {
+                  callback(repoName, xmlhttp.status, xmlhttp.responseText);
+              } else {
+                  callback(repoName, xmlhttp.status, null);
+              }
+          }
+      }
+      xmlhttp.send();
+    }
+
+    // Update the repository status indicator
+    function updateRepoStatus() {
+        for(var repoName in REPOLIST) {
+            getTextFromUrl(repoName, REPOLIST[repoName].lockfile, function (repoName, statusCode, responseText) {
+                if(statusCode == 200) {
+                    setRepoStatusUpdating(repoName);
+                } else {
+                    getTextFromUrl(repoName, REPOLIST[repoName].tracefile, function (repoName, statusCode, responseText) {
+                        if(statusCode != 200) {
+                            setRepoStatusMaintenance(repoName);
+                        } else {
+                            const traceRegEx = RegExp('(.+[1-9A-Za-z\ \-]): (.*)','g');
+                            var traceList = {};
+                            var traceRegExArray = [];
+
+                            while ((traceRegExArray = traceRegEx.exec(responseText)) !== null) {
+                                traceList[traceRegExArray[1]] = traceRegExArray[2];
+                            }
+
+                            var date = Date.parse(traceList['Date']);
+                            var dateNow = Date.now();
+
+                            // 1 day = 86400000 ms
+                            if(dateNow - date <= 86400000 / REPOLIST[repoName].updatecountaday) {
+                                setRepoStatusNormal(repoName);
+                            } else {
+                                setRepoStatusOutdated(repoName);
+                            }
+
+                            // Update the "Last updated" time string
+                            document.getElementById('hs-status-lastupdated').innerHTML =  new Date(dateNow).toUTCString();
+                        }
+                    });
+                }
+            });
+        }
+    }
+
+    window.setInterval(updateRepoStatus, 60000); // Run status update every 60 seconds
+
+    const DN = 'ftp.harukasan.org';
+    const METHOD = '//'; // Follow current protocol
+    const MIRRORNAME = 'ftp.harukasan.org';
+    const REPOLIST = {
+        'CPAN': { lockfile: METHOD + DN + '/CPAN/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/CPAN/project/trace/' + MIRRORNAME, updatecountaday: 2 },
+        'CRAN': { lockfile: METHOD + DN + '/CRAN/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/CRAN/project/trace/' + MIRRORNAME, updatecountaday: 2 },
+        'CTAN': { lockfile: METHOD + DN + '/CTAN/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/CTAN/project/trace/' + MIRRORNAME, updatecountaday: 1 },
+        'debian': { lockfile: METHOD + DN + '/debian/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/debian/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'debian-archive': { lockfile: METHOD + DN + '/debian-archive/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/debian-archive/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'debian-cd': { lockfile: METHOD + DN + '/debian-cd/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/debian-cd/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'debian-cd-weekly': { lockfile: METHOD + DN + '/debian-cd-weekly/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/debian-cd-weekly/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'debian-ports': { lockfile: METHOD + DN + '/debian-ports/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/debian-ports/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'debian-security': { lockfile: METHOD + DN + '/debian-security/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/debian-security/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'dotdeb': { lockfile: METHOD + DN + '/dotdeb/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/dotdeb/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'eclipse': { lockfile: METHOD + DN + '/eclipse/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/eclipse/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'kali': { lockfile: METHOD + DN + '/kali/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/kali/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'kali-images': { lockfile: METHOD + DN + '/kali-images/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/kali-images/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'linuxmint': { lockfile: METHOD + DN + '/linuxmint/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/linuxmint/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'mariadb': { lockfile: METHOD + DN + '/mariadb/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/mariadb/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'php.net': { lockfile: METHOD + DN + '/php.net/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/php.net/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'raspberrypi': { lockfile: METHOD + DN + '/raspberrypi/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/raspberrypi/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'raspbian': { lockfile: METHOD + DN + '/raspbian/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/raspbian/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'ubuntu': { lockfile: METHOD + DN + '/ubuntu/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/ubuntu/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'ubuntu-cdimage': { lockfile: METHOD + DN + '/ubuntu-cdimage/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/ubuntu-cdimage/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'ubuntu-ports': { lockfile: METHOD + DN + '/ubuntu-ports/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/ubuntu-ports/project/trace/' + MIRRORNAME, updatecountaday: 4 },
+        'ubuntu-releases': { lockfile: METHOD + DN + '/ubuntu-releases/Archive-Update-in-Progress-' + MIRRORNAME, tracefile: METHOD + DN + '/ubuntu-releases/project/trace/' + MIRRORNAME, updatecountaday: 6 }
+    };
   </script>
   <script async src="https://platform.twitter.com/widgets.js"></script>
 </body>
