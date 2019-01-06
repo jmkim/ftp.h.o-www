@@ -262,10 +262,16 @@
             getTextFromUrl(repoName, REPOLIST[repoName].lockfile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                 if(statusCode == 200) {
                     setRepoStatusUpdating(repoName);
+
+                    // Update the "Last updated" time string
+                    document.getElementById('hs-status-lastupdated').innerHTML =  new Date(Date.now()).toUTCString();
                 } else {
                     getTextFromUrl(repoName, REPOLIST[repoName].tracefile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                         if(statusCode != 200) {
                             setRepoStatusMaintenance(repoName);
+
+                            // Update the "Last updated" time string
+                            document.getElementById('hs-status-lastupdated').innerHTML =  new Date(Date.now()).toUTCString();
                         } else {
                             const traceRegEx = RegExp('(.+[1-9A-Za-z\ \-]): (.*)','g');
                             var traceList = {};
