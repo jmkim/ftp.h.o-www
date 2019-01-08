@@ -242,7 +242,7 @@
     }
 
     function getTextFromUrl(repoName, repoTracefileUrl, callback) {
-      var xmlhttp = new XMLHttpRequest();
+      let xmlhttp = new XMLHttpRequest();
       xmlhttp.open("GET", repoTracefileUrl, true);
       xmlhttp.onreadystatechange = function() {
           if (xmlhttp.readyState == 4) {
@@ -258,7 +258,7 @@
 
     // Update the repository status indicator
     function updateRepoStatus() {
-        for(var repoName in REPOLIST) {
+        for(let repoName in REPOLIST) {
             getTextFromUrl(repoName, REPOLIST[repoName].lockfile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                 if(statusCode == 200) {
                     setRepoStatusUpdating(repoName);
@@ -274,15 +274,15 @@
                             document.getElementById('hs-status-lastupdated').innerHTML =  new Date(Date.now()).toUTCString();
                         } else {
                             const traceRegEx = RegExp('(.+[1-9A-Za-z\ \-]): (.*)','g');
-                            var traceList = {};
-                            var traceRegExArray = [];
+                            let traceList = {};
+                            let traceRegExArray = [];
 
                             while ((traceRegExArray = traceRegEx.exec(responseText)) !== null) {
                                 traceList[traceRegExArray[1]] = traceRegExArray[2];
                             }
 
-                            var date = Date.parse(traceList['Date']);
-                            var dateNow = Date.now();
+                            let date = Date.parse(traceList['Date']);
+                            let dateNow = Date.now();
 
                             // 1 day = 86400000 ms
                             if(dateNow - date <= 86400000 / REPOLIST[repoName].updatecountaday) {
