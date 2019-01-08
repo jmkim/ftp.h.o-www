@@ -214,30 +214,30 @@
     });
   </script>
   <script>
-    function clearRepoStatus(repoName) {
+    function clearHTMLStatusIndicator(repoName) {
       document.getElementById('hs-status-' + repoName).classList.remove('hs-status-normal');
       document.getElementById('hs-status-' + repoName).classList.remove('hs-status-updating');
       document.getElementById('hs-status-' + repoName).classList.remove('hs-status-outdated');
       document.getElementById('hs-status-' + repoName).classList.remove('hs-status-maintenance');
     }
 
-    function setRepoStatusNormal(repoName) {
-      clearRepoStatus(repoName);
+    function setHTMLStatusIndicatorNormal(repoName) {
+      clearHTMLStatusIndicator(repoName);
       document.getElementById('hs-status-' + repoName).classList.add('hs-status-normal');
     }
 
-    function setRepoStatusUpdating(repoName) {
-      clearRepoStatus(repoName);
+    function setHTMLStatusIndicatorUpdating(repoName) {
+      clearHTMLStatusIndicator(repoName);
       document.getElementById('hs-status-' + repoName).classList.add('hs-status-updating');
     }
 
-    function setRepoStatusOutdated(repoName) {
-      clearRepoStatus(repoName);
+    function setHTMLStatusIndicatorOutdated(repoName) {
+      clearHTMLStatusIndicator(repoName);
       document.getElementById('hs-status-' + repoName).classList.add('hs-status-outdated');
     }
 
-    function setRepoStatusMaintenance(repoName) {
-      clearRepoStatus(repoName);
+    function setHTMLStatusIndicatorMaintenance(repoName) {
+      clearHTMLStatusIndicator(repoName);
       document.getElementById('hs-status-' + repoName).classList.add('hs-status-maintenance');
     }
 
@@ -261,14 +261,14 @@
         for(let repoName in REPOLIST) {
             getTextFromUrl(repoName, REPOLIST[repoName].lockfile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                 if(statusCode == 200) {
-                    setRepoStatusUpdating(repoName);
+                    setHTMLStatusIndicatorUpdating(repoName);
 
                     // Update the "Last updated" time string
                     document.getElementById('hs-status-lastupdated').innerHTML =  new Date(Date.now()).toUTCString();
                 } else {
                     getTextFromUrl(repoName, REPOLIST[repoName].tracefile + '?t=' + Date.now(), function (repoName, statusCode, responseText) {
                         if(statusCode != 200) {
-                            setRepoStatusMaintenance(repoName);
+                            setHTMLStatusIndicatorMaintenance(repoName);
 
                             // Update the "Last updated" time string
                             document.getElementById('hs-status-lastupdated').innerHTML =  new Date(Date.now()).toUTCString();
@@ -286,9 +286,9 @@
 
                             // 1 day = 86400000 ms
                             if(dateNow - date <= 86400000 / REPOLIST[repoName].updatecountaday) {
-                                setRepoStatusNormal(repoName);
+                                setHTMLStatusIndicatorNormal(repoName);
                             } else {
-                                setRepoStatusOutdated(repoName);
+                                setHTMLStatusIndicatorOutdated(repoName);
                             }
 
                             // Update the "Last updated" time string
