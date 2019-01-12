@@ -1,5 +1,6 @@
 User-Agent: *
 Disallow: /.harukasan/
+Disallow: /.well-known/acme-challenge/
 Disallow: /goaccess/
 Disallow: /pub/
 Disallow: /CPAN/
