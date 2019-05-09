@@ -17,6 +17,7 @@ Disallow: /eclipse/
 Disallow: /kali/
 Disallow: /kali-images/
 Disallow: /linuxmint/
+Disallow: /linuxmint-iso/
 Disallow: /mariadb/
 Disallow: /mxlinux/
 Disallow: /mxlinux-iso/
