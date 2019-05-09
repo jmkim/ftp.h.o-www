@@ -3,6 +3,7 @@ Disallow: /.harukasan/
 Disallow: /.well-known/acme-challenge/
 Disallow: /goaccess/
 Disallow: /pub/
+Disallow: /archlinux/
 Disallow: /CPAN/
 Disallow: /CRAN/
 Disallow: /CTAN/
