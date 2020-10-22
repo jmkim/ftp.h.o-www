@@ -14,6 +14,7 @@ Disallow: /debian-cd/
 Disallow: /debian-cd-weekly/
 Disallow: /debian-ports/
 Disallow: /debian-security/
+Disallow: /deepin/
 Disallow: /dotdeb/
 Disallow: /eclipse/
 Disallow: /kali/
