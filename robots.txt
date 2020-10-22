@@ -7,6 +7,7 @@ Disallow: /archlinux/
 Disallow: /CPAN/
 Disallow: /CRAN/
 Disallow: /CTAN/
+Disallow: /deb-multimedia/
 Disallow: /debian/
 Disallow: /debian-archive/
 Disallow: /debian-cd/
