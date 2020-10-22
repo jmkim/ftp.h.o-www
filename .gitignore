@@ -5,6 +5,7 @@
 goaccess/
 
 # Repositories
+archlinux/
 CPAN/
 CRAN/
 CTAN/
@@ -22,6 +23,7 @@ eclipse/
 kali/
 kali-images/
 linuxmint/
+linuxmint-iso/
 mariadb/
 mxlinux/
 mxlinux-iso/
