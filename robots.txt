@@ -25,7 +25,6 @@ Disallow: /linuxmint-iso/
 Disallow: /mariadb/
 Disallow: /mxlinux/
 Disallow: /mxlinux-iso/
-Disallow: /php.net/
 Disallow: /raspberrypi/
 Disallow: /raspbian/
 Disallow: /ubuntu/
